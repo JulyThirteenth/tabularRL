@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68,<82"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tabular-rl"
+version = "0.1.0"
+description = "Educational tabular dynamic-programming and TD-control algorithms"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "gymnasium>=1.0",
+  "numpy>=1.24",
+  "pygame>=2.1.3",
+]
+
+[tool.setuptools]
+package-dir = { tabularRL = "." }
+packages = [
+  "tabularRL",
+  "tabularRL.dp_method",
+  "tabularRL.td_learning",
+  "tabularRL.grid_env",
+  "tabularRL.grid_env.grid_env",
+  "tabularRL.grid_env.grid_env.envs",
+  "tabularRL.grid_env.grid_env.wrappers",
+]
